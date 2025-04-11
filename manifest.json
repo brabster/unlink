@@ -1,0 +1,19 @@
+{
+    "name": "Unlink",
+    "description": "Block links",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "unlink_icon.png"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": ["scripts/links.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+  }
