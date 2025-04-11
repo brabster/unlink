@@ -10,7 +10,7 @@ const extLinkOnclickEventHandler = (e) => {
 const isAllowedDomainOrSubdomain = (allowedDomainsAndSubdomains, link) =>
   allowedDomainsAndSubdomains.some((allowed) => link.host && link.host.endsWith(allowed))
 
-const isDifferentOriginLink = (link) => link.host && link.host != window.location.host
+const isDifferentOriginLink = (link) => link.host && !link.host.endsWith(window.location.host)
 
 const hostCheckAndBlock = (allowedDomainsAndSubdomains) => {
   return (link) => {

@@ -1,6 +1,22 @@
 # README
 
-A Chrome extension to highlight links on a page that do not point back to the origin domain or subdomains. Supports a list of trusted domains and subdomains that are not highlighted.
+A Chrome extension to highlight links on a page that do not point back to the origin domain or subdomains. Supports a list of trusted domains and subdomains that are not highlighted. Domains and URLs can be added. URLs are parsed to domains. Subdomains are also trusted, as ownership of a domain is pre-requisite to creating subdomains. They can also be removed individually or cleared.
+
+With no domains set, a Google search looks like this:
+
+![Google search with same-origin links unaffected and external links to developer.chrome.com, support.google.com and freecodecamp.com highlighted in pink boxes](docs/untrusted.png)
+
+Adding `developer.chrome.com`, the highlight and click prevention for the first result is removed.
+
+![The same search after adding developer.chrome.com to the trusted list. Links to developer.chrome.com are no longer highlighted.](docs/trusted.png)
+
+`support.google.com` is still highlighted, as the page host value is `www.google.com`. Adding `google.com` to the trusted domains list removes highlighting and click prevention from `support.google.com` along with any other subdomains like `mail.google.com`.
+
+Clicking highlighted links is blocked, but you can right-click and open in new tab to one-off open a link without trusting the domain.
+
+## Installation
+
+Cloning the repo and install the unpacked extension via chrome://extensions.
 
 ## Disclaimer
 
