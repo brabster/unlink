@@ -14,7 +14,7 @@ Adding `developer.chrome.com`, the highlight and click prevention for the first 
 
 `support.google.com` is still highlighted, as the page host value is `www.google.com`. Adding `google.com` to the trusted domains list removes highlighting and click prevention from `support.google.com` along with any other subdomains like `mail.google.com`.
 
-Clicking highlighted links is blocked, but you can right-click and open in new tab to one-off open a link without trusting the domain.
+Clicking highlighted links is blocked, but you can right-click and open in new tab to one-off open a link without trusting the domain. Trusted list is kept in local storage and not synced. Separate Chrome profiles have separate trusted site lists.
 
 ## Installation
 
