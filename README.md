@@ -1,5 +1,7 @@
 # README
 
+**Goal**: to add a little friction and visibility when links might be pointing to malicious destinations. Needs to work in GMail web client.
+
 A Chrome extension to highlight links on a page that do not point back to the origin domain or subdomains. Supports a list of trusted domains and subdomains that are not highlighted. Domains and URLs can be added. URLs are parsed to domains. Subdomains are also trusted, as ownership of a domain is pre-requisite to creating subdomains. They can also be removed individually or cleared.
 
 With no domains set, a Google search looks like this:
